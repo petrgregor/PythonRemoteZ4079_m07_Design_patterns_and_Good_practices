@@ -3,12 +3,12 @@
 ## Osvědčené postupy (23. 1. 2025)
 -[x] PEP 8
 -[x] PEP 257 - docstring
--[ ] SOLID
+-[x] SOLID
   -[x] S (Single responsibility principle) - Princip jedné zodpovědnosti
   -[x] O (Open/Close principle) - Princip otevřenosti a uzavřenosti
-  -[x] L (Liskov's Substitution Principle) - Liskovův substituční princip)
-  -[ ] I (Interface Segregation Principle) - Princip segregace rozhraní
-  -[ ] D (Dependency Inversion Principle) - Princip inverze závislosti
+  -[x] L (Liskov's Substitution Principle) - Liskovové substituční princip)
+  -[x] I (Interface Segregation Principle) - Princip segregace rozhraní
+  -[x] D (Dependency Inversion Principle) - Princip inverze závislosti
 
 ## Návrhové vzory (Design patterns)
 ### Vytvářecí vzory (3. 2. 2025)
