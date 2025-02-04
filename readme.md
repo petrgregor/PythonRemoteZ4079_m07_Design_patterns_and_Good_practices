@@ -25,7 +25,7 @@
 -[x] Decorator
 -[x] Facade
 -[x] Flyweight
--[ ] Proxy
+-[x] Proxy
 
 ### Vzory chování (5. 2. 2025)
 -[ ] Chain of responsibility
