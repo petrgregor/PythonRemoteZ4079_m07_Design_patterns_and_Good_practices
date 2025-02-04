@@ -74,13 +74,19 @@ def main():
     print(f"Favorites age:        {favorite1.get_age()}")
     print(f"Favorites grades:     {favorite1.get_grades()}")
 
-    """student1 = FavoriteAdapter(Favorite("Martin", "Novák", "martin@novak.cz", 19, [1, 2, 3, 1]))
-    student2 = FavoriteAdapter(Favorite("Petr", "Svoboda", "petr@svoboda.cz", 17, [2, 2, 2]))
+    print('-'*80)
+    student2 = FavoriteAdapter(favorite1)
+    print(f"Students full name: {student2.get_full_name()}")
+    print(f"Students contact:   {student2.get_contact_details()}")
+    print(f"Student is adult:   {student2.is_adult()}")
+    print(f"Students results:   {student2.get_results()}")
 
-    print(f"{'Adult' if student1.is_adult() else 'Child'}")
-    print(f"Full name: {student1.get_full_name()}")
-    print(f"Contact: {student1.get_contact_details()}")
-    print(f"Results: {student1.get_results()}")"""
+    print('-'*80)
+    student3 = FavoriteAdapter(Favorite("Cyril", "Novotný", "cyril@novotny.cz", 14, [1, 1]))
+    print(f"Students full name: {student3.get_full_name()}")
+    print(f"Students contact:   {student3.get_contact_details()}")
+    print(f"Student is adult:   {student3.is_adult()}")
+    print(f"Students results:   {student3.get_results()}")
 
 
 if __name__ == '__main__':
