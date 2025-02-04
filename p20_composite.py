@@ -62,8 +62,7 @@ class CompoundLine(Line):
     def starting_point(self):
         if not self._lines:
             return Point(0, 0)
-        else:
-            return self._lines[0].starting_point()
+        return self._lines[0].starting_point()
 
     @starting_point.setter
     def starting_point(self, value):
@@ -113,6 +112,7 @@ def main():
 
     print("Compound 2 v. 1:")
     compound2.draw(15)
+
 
 if __name__ == '__main__':
     main()
