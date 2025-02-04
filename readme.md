@@ -21,7 +21,7 @@
 ### Strukturální vzory (4. 2. 2025)
 -[x] Adapter
 -[x] Bridge
--[ ] Composite
+-[x] Composite
 -[ ] Decorator
 -[ ] Facade
 -[ ] Flyweight
