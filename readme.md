@@ -24,7 +24,7 @@
 -[x] Composite
 -[x] Decorator
 -[ ] Facade
--[ ] Flyweight
+-[x] Flyweight
 -[ ] Proxy
 
 ### Vzory chování (5. 2. 2025)

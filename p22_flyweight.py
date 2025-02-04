@@ -44,7 +44,7 @@ class CarFactory:
 
 def main():
     produced_cars = []
-    for i in range(1000):
+    for i in range(100000):
         engine_type = random.randint(0, 3)
         if engine_type == 0:
             produced_cars.append(CarFactory.create_vw_polo(random.randint(1000000, 99999999)))
@@ -55,7 +55,7 @@ def main():
         else:
             produced_cars.append(CarFactory.create_skoda_citigo(random.randint(1000000, 9999999)))
 
-    print(f"I created {len(produced_cars)} cars, but only {Engine.instances}, references to Engine objects")
+    print(f"I created {len(produced_cars)} cars, but only {Engine.instances} references to Engine objects")
 
 
 if __name__ == '__main__':
