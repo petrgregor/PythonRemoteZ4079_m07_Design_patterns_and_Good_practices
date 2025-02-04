@@ -19,8 +19,8 @@
 -[x] Factory Method
 
 ### Strukturální vzory (4. 2. 2025)
--[ ] Adapter
--[ ] Bridge
+-[x] Adapter
+-[x] Bridge
 -[ ] Composite
 -[ ] Decorator
 -[ ] Facade
