@@ -35,6 +35,7 @@ class DeathCountInfoDecorator(FragStatistics):
         return self._frag_statistics.increment_frag_count()
 
     def increment_death_count(self):
+        print("Enemy died.")
         return self._frag_statistics.increment_death_count()
 
     def reset(self):
@@ -105,7 +106,31 @@ def main():
     statistics.increment_death_count()
     statistics.increment_frag_count()
 
-    decorated_statistics = FragDeathRatioDecorator(FragInfoDecorator(DisplayCountersDecorator(DeathCountInfoDecorator(statistics))))
+    decorated_statistics = DeathCountInfoDecorator(statistics)
+    decorated_statistics.increment_death_count()
+    decorated_statistics.increment_frag_count()
+
+    print('-'*80)
+    decorated_statistics = DisplayCountersDecorator(statistics)
+    decorated_statistics.increment_death_count()
+    decorated_statistics.increment_frag_count()
+
+    print('-'*80)
+    decorated_statistics = DisplayCountersDecorator(DeathCountInfoDecorator(statistics))
+    decorated_statistics.increment_death_count()
+    decorated_statistics.increment_frag_count()
+
+    print('-' * 80)
+    decorated_statistics = DeathCountInfoDecorator(DisplayCountersDecorator(statistics))
+    decorated_statistics.increment_death_count()
+    decorated_statistics.increment_frag_count()
+
+    print('-'*80)
+    decorated_statistics = FragDeathRatioDecorator(
+        FragInfoDecorator(
+            DisplayCountersDecorator(
+                DeathCountInfoDecorator(
+                    statistics))))
 
     decorated_statistics.increment_frag_count()
     decorated_statistics.increment_frag_count()
