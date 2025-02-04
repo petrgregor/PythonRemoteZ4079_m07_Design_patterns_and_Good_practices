@@ -12,11 +12,11 @@
 
 ## Návrhové vzory (Design patterns)
 ### Vytvářecí vzory (3. 2. 2025)
--[ ] Singleton
--[ ] Builder
--[ ] Prototype
--[ ] Abstract Factory
--[ ] Factory Method
+-[x] Singleton
+-[x] Builder
+-[x] Prototype
+-[x] Abstract Factory
+-[x] Factory Method
 
 ### Strukturální vzory (4. 2. 2025)
 -[ ] Adapter
