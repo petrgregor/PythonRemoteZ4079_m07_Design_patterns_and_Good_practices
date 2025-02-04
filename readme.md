@@ -23,7 +23,7 @@
 -[x] Bridge
 -[x] Composite
 -[x] Decorator
--[ ] Facade
+-[x] Facade
 -[x] Flyweight
 -[ ] Proxy
 
