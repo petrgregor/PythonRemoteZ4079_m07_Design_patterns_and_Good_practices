@@ -1,6 +1,7 @@
-# TODO: změnit na abstraktní třídy
+from abc import ABC
 
-class Drink:
+
+class Drink(ABC):
     def get_volume(self):
         pass
 
@@ -27,6 +28,11 @@ class Coffee(Drink):
     def get_taste(self):
         return "bitter"
 
+    def __str__(self):
+        return (f"Coffee with volume {self.get_volume()}, is additive, "
+                f"with {self.get_number_of_sugar_lumps()} sugar lumps and "
+                f"{self.get_taste()} taste.")
+
 
 class Tea(Drink):
     def get_volume(self):
@@ -41,9 +47,14 @@ class Tea(Drink):
     def get_taste(self):
         return "sweet"
 
+    def __str__(self):
+        return (f"Tea with volume {self.get_volume()}, is not additive, "
+                f"with {self.get_number_of_sugar_lumps()} sugar lumps and "
+                f"{self.get_taste()} taste.")
 
-class DrinkPurchase:
-    def buy(self):
+
+class DrinkPurchase(ABC):
+    def buy(self, cost):
         pass
 
 
@@ -75,9 +86,11 @@ def main():
     #tea = Tea()
 
     coffee_purchase = CoffeePurchase()
-    coffee_purchase.buy(200)
+    print(coffee_purchase.buy(200))
     tea_purchase = TeaPurchase()
-    tea_purchase.buy(150)
+    print(tea_purchase.buy(150))
+
+    # TODO: Upravte tak, aby bylo možné volit objem nápoje, počet cukrů a chuť.
 
 
 if __name__ == '__main__':
