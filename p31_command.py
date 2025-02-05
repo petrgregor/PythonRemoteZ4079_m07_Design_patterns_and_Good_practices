@@ -52,7 +52,11 @@ class RemoveEmptyLinesCommand(Command):
 # TODO: implementovat příkaz pro přidání prázdných řádků tak, aby soubor splňoval PEP8 specifikaci
 
 def main():
-    python_file = PythonFile('test.py', ["import this", "    ", "print('That's all folks!)", ""])
+    python_file = PythonFile('test.py',
+                             ["import this",
+                              "    ",
+                              "print('That's all folks!)",
+                              ""])
 
     change_file_name_command = ChangeFileNameCommand(python_file, 'zen.py')
     remove_empty_lines_command = RemoveEmptyLinesCommand(python_file)

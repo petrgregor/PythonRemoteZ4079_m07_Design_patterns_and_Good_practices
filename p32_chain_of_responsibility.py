@@ -33,8 +33,7 @@ class AWSAuthenticationHandler(AuthenticationHandler):
     def authenticate(self, credentials):
         if self.supports(credentials):
             return self.authenticate_in_aws(credentials)
-        else:
-            return False
+        return False
 
     def supports(self, cls):
         return isinstance(cls, AWSSignature)
@@ -47,8 +46,7 @@ class BearerTokenAuthenticationHandler(AuthenticationHandler):
     def authenticate(self, credentials):
         if self.supports(credentials):
             return self.is_token_valid(credentials)
-        else:
-            return False
+        return False
 
     def supports(self, cls):
         return isinstance(cls, BearerToken)
@@ -61,8 +59,7 @@ class UserNameAndPasswordAuthenticationHandler(AuthenticationHandler):
     def authenticate(self, credentials):
         if self.supports(credentials):
             return self.is_password_valid(credentials)
-        else:
-            return False
+        return False
 
     def supports(self, cls):
         return isinstance(cls, UserNameAndPasswordCredentials)
@@ -80,8 +77,7 @@ class ChainAuthenticationElement:
         if self._authentication_handler.authenticate(credentials):
             print(f"Authentication using handler {credentials.__class__.__name__}")
             return True
-        else:
-            return self._next and self._next.authenticate(credentials)
+        return self._next and self._next.authenticate(credentials)
 
 
 def main():
@@ -92,6 +88,7 @@ def main():
     last_element = ChainAuthenticationElement(authentication_handler_aws)
     middle_element = ChainAuthenticationElement(authentication_handler_bearer, last_element)
     first_element = ChainAuthenticationElement(authentication_handler_unp, middle_element)
+    # UserNameAndPassword -> BearerToken -> AWSAuthentication
 
     first_element.authenticate(AWSSignature())
     first_element.authenticate(UserNameAndPasswordCredentials())

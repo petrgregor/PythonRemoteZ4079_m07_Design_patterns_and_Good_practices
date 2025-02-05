@@ -13,8 +13,7 @@ class SportTeamIterator:
             val = self._members[self._idx]
             self._idx += 1
             return val
-        else:
-            raise StopIteration
+        raise StopIteration
 
     def __iter__(self):
         return self
@@ -30,8 +29,7 @@ class SportTeamInverseIterator:
             val = self._members[self._idx]
             self._idx -= 1
             return val
-        else:
-            raise StopIteration
+        raise StopIteration
 
     def __iter__(self):
         return self
@@ -57,8 +55,12 @@ def main():
     sport_team.add_member('michael white ')
     sport_team.add_member('  chris stokes')
 
+    #print(sport_team.__iter__().__next__())
+
     for member in sport_team:
         print(member)
+
+    #print(sport_team.__iter__().__next__())
 
 
 if __name__ == '__main__':

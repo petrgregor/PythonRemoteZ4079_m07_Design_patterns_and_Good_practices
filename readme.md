@@ -28,16 +28,16 @@
 -[x] Proxy
 
 ### Vzory chování (5. 2. 2025)
--[ ] Chain of responsibility
--[ ] Command
--[ ] Interpreter
--[ ] Iterator
--[ ] Mediator
--[ ] Memento
--[ ] Observer
--[ ] State
--[ ] Strategy
--[ ] Template Method
--[ ] Visitor
+-[x] Chain of responsibility
+-[x] Command
+-[x] Interpreter
+-[x] Iterator
+-[x] Mediator
+-[x] Memento
+-[x] Observer
+-[x] State
+-[x] Strategy
+-[x] Template Method
+-[x] Visitor
 
 

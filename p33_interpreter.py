@@ -20,6 +20,9 @@ class Interpreter:
 
 
 class PythonStyleWithoutOrderMathOperationsInterpreter(Interpreter):
+    """ Interpretuje matematické symboly bez priorit
+    Například: 2 + 3 * 5 =  5 * 5 = 25
+    """
     def __init__(self, math_operation_applier):
         self._math_operation_applier = math_operation_applier
 

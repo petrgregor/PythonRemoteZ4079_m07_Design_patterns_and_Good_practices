@@ -11,8 +11,7 @@ class CustomIterator:
             val = self.data[self.idx]
             self.idx += 1
             return val
-        else:
-            raise StopIteration
+        raise StopIteration
 
 
 class CustomClass:
